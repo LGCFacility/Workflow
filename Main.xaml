@@ -1,0 +1,632 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="949,6276" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/intelligentocr" xmlns:p1="http://schemas.uipath.com/workflow/activities/intelligentocr/classification" xmlns:p2="http://schemas.uipath.com/workflow/activities/document-processing-contracts/classification" xmlns:p3="http://schemas.uipath.com/workflow/activities/document-processing-contracts/dom" xmlns:p4="http://schemas.uipath.com/workflow/activities/document-processing-contracts/results" xmlns:p5="http://schemas.uipath.com/workflow/activities/intelligentocr/extraction" xmlns:p6="http://schemas.uipath.com/workflow/activities/documentunderstanding-ml" xmlns:p7="http://schemas.uipath.com/workflow/activities/document-processing-contracts/extraction" xmlns:p8="http://schemas.uipath.com/workflow/activities/document-processing-contracts/taxonomy" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:sd1="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="60">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.TaxonomyManagement</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Taxonomy</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.Digitization</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Dom</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.Core.Activities.OCR.Engines</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.DocumentClassification</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Results</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Training</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Classification</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.Training</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.DataExtraction</x:String>
+      <x:String>UiPath.DocumentUnderstanding.ML.Activities</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.DataExtraction</x:String>
+      <x:String>UiPath.DocumentUnderstanding.ML.Activities.Editors</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.ValidationStation</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPathTeam.WhatsGoingOn.Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.Vision.Core.OCR</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.Actions.Model</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+      <x:String>UiPath.OmniPage.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Abbyy.Core.FlexiCapture</x:String>
+      <x:String>UiPath.Abbyy.Core.FlexiCapture.Enums</x:String>
+      <x:String>UiPath.Abbyy.Core.FlexiCapture.ValidationStationAdapters</x:String>
+      <x:String>UiPath.Abbyy.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="78">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentProcessing.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentUnderstanding.ML.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPathTeam.WhatsGoingOn.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.OmniPage.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OmniPage.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.Abbyy.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Abbyy.Core</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="- 이 프로젝트 아래 &quot;documents&quot; 폴더에 담긴 문서들을 자동으로 인식합니다.&#xA;- 추출한 데이터는 &quot;output&quot; 폴더에 저장합니다.&#xA;- 각 문서들을 인식하기 전에 작업을 멈출 것인지 사용자의 확인을 구합니다.&#xD;&#xA;&#xD;&#xA;- API Key: LvB7b2P9f15YEivD6RCAKayPOICcPmWh8u6nPls9AFewaZVYpMG1nETZjnvymSr9DIjNbrxPWuWZMYoqoZz1zw==" sap:VirtualizedContainerService.HintSize="959,6211" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="s:String[]" Name="documents" />
+      <Variable x:TypeArguments="p8:DocumentTaxonomy" Name="taxonomy" />
+      <Variable x:TypeArguments="x:Int32" Name="index" />
+      <Variable x:TypeArguments="x:String" Name="defaultPath" />
+      <Variable x:TypeArguments="x:String" Name="folderPath" />
+      <Variable x:TypeArguments="sd1:DataTable" Name="dtFinal" />
+      <Variable x:TypeArguments="x:Boolean" Default="True" Name="boolFlag" />
+      <Variable x:TypeArguments="sd1:DataTable" Name="dtFileName" />
+      <Variable x:TypeArguments="sd1:DataTable" Name="dtNoClassfication" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:SelectFolder DisplayName="Select Folder" sap:VirtualizedContainerService.HintSize="917,22" sap2010:WorkflowViewState.IdRef="SelectFolder_1" SelectedFolder="[defaultPath]" />
+    <Assign sap:VirtualizedContainerService.HintSize="917,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[folderPath]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[Now.ToString("yyMMdd_HHmmss")]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:CreateDirectory ContinueOnError="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="917,79" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[defaultPath+&quot;\&quot;+folderPath+&quot;\&quot;]" />
+    <Assign sap2010:Annotation.AnnotationText="인식할 대상 문서들입니다." sap:VirtualizedContainerService.HintSize="917,91" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="s:String[]">[documents]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="s:String[]">[Directory.GetFiles(defaultPath)]</InArgument>
+      </Assign.Value>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </Assign>
+    <p:LoadTaxonomy DisplayName="Load Taxonomy" sap:VirtualizedContainerService.HintSize="917,103" sap2010:WorkflowViewState.IdRef="LoadTaxonomy_1" Taxonomy="[taxonomy]" />
+    <ui:BuildDataTable DataTable="[dtNoClassfication]" DisplayName="Build Data Table - dtNoClassfication" sap:VirtualizedContainerService.HintSize="917,59" sap2010:WorkflowViewState.IdRef="BuildDataTable_3" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;FileName&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="[index]" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="917,4829" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[documents]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="x:String">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:String" Name="document" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="881,4695" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="doctext" />
+              <Variable x:TypeArguments="p3:Document" Name="dom" />
+              <Variable x:TypeArguments="p4:ClassificationResult[]" Name="classification_results" />
+              <Variable x:TypeArguments="p4:ClassificationResult[]" Name="validated_classifications" />
+              <Variable x:TypeArguments="p4:ExtractionResult" Name="extraction_result" />
+              <Variable x:TypeArguments="p4:ExtractionResult" Name="validated_result" />
+              <Variable x:TypeArguments="sd1:DataSet" Name="dataset" />
+              <Variable x:TypeArguments="x:String" Name="response" />
+              <Variable x:TypeArguments="x:String" Name="filename" />
+              <Variable x:TypeArguments="x:Int32" Name="index2" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign sap2010:Annotation.AnnotationText="경로를 제외한 파일명을 구합니다." sap:VirtualizedContainerService.HintSize="839,91" sap2010:WorkflowViewState.IdRef="Assign_3">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[filename]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[Path.GetFileName(document)]</InArgument>
+              </Assign.Value>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </Assign>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="839,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[String.Format(&quot;[{0}번째 파일] {1}: Digitizing...&quot;, index + 1, filename)]" />
+            <p:DigitizeDocument DegreeOfParallelism="1" DisplayName="Digitize Document" DocumentObjectModel="[dom]" DocumentPath="[document]" DocumentText="[doctext]" ForceApplyOCR="False" sap:VirtualizedContainerService.HintSize="839,293" sap2010:WorkflowViewState.IdRef="DigitizeDocument_3">
+              <p:DigitizeDocument.OCREngine>
+                <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
+                  <ActivityFunc.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                  </ActivityFunc.Argument>
+                  <ui:MicrosoftOCR FilterRegion="{x:Null}" Language="{x:Null}" Output="{x:Null}" Profile="{x:Null}" Scale="{x:Null}" Text="{x:Null}" ComputeSkewAngle="False" DisplayName="Microsoft OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="312,22" sap2010:WorkflowViewState.IdRef="MicrosoftOCR_1" Image="[Image]" />
+                </ActivityFunc>
+              </p:DigitizeDocument.OCREngine>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </p:DigitizeDocument>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="839,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[String.Format(&quot;[{0}번째 파일] {1}: Classifying...&quot;, index + 1, filename)]" />
+            <p1:ClassifyDocumentScope sap2010:Annotation.AnnotationText="[Optional] 문서를 자동으로 구분(classify)합니다." ClassificationResults="[classification_results]" DisplayName="Classify Document Scope" DocumentObjectModel="[dom]" DocumentPath="[document]" DocumentText="[doctext]" sap:VirtualizedContainerService.HintSize="839,465" sap2010:WorkflowViewState.IdRef="ClassifyDocumentScope_3" Taxonomy="[taxonomy]" TaxonomyConfiguration="{}{&quot;TaxonomyMappings&quot;:{&quot;UIb045a45524d048efbebba9845450724e&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;y2c.stationery.psv&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;y2c.stationery.psv&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:false},&quot;y2c.instrument.flow_control_valve&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;y2c.instrument.flow_control_valve&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:false},&quot;y2c.instrument.control_valve(FAMAN)&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;y2c.instrument.control_valve(FAMAN)&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true},&quot;y2c.rotating.centrifugal_pump&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;y2c.rotating.centrifugal_pump&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:false},&quot;y2c.rotating.agiator&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;y2c.rotating.agiator&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:false}}}},&quot;ClassifierMinimumConfidence&quot;:{&quot;UIb045a45524d048efbebba9845450724e&quot;:&quot;0&quot;},&quot;DocumentTypesByPersistenceId&quot;:{&quot;UIb045a45524d048efbebba9845450724e&quot;:[]}}">
+              <p1:ClassifyDocumentScope.Classifiers>
+                <p1:KeywordBasedClassifier HumanValidatedData="{x:Null}" LearningData="{x:Null}" DisplayName="Keyword Based Classifier" sap:VirtualizedContainerService.HintSize="234,113" sap2010:WorkflowViewState.IdRef="KeywordBasedClassifier_5" LearningFilePath="DocumentProcessing\keywords.json" PersistenceId="UIb045a45524d048efbebba9845450724e">
+                  <p1:KeywordBasedClassifier.ClassifierResult>
+                    <OutArgument x:TypeArguments="p2:ClassifierResult">
+                      <DelegateArgumentReference x:TypeArguments="p2:ClassifierResult">
+                        <DelegateOutArgument x:TypeArguments="p2:ClassifierResult" Name="ClassificationResult" />
+                      </DelegateArgumentReference>
+                    </OutArgument>
+                  </p1:KeywordBasedClassifier.ClassifierResult>
+                  <p1:KeywordBasedClassifier.DocumentObjectModel>
+                    <InArgument x:TypeArguments="p3:Document">
+                      <DelegateArgumentValue x:TypeArguments="p3:Document">
+                        <DelegateInArgument x:TypeArguments="p3:Document" Name="DocumentObjectModel" />
+                      </DelegateArgumentValue>
+                    </InArgument>
+                  </p1:KeywordBasedClassifier.DocumentObjectModel>
+                  <p1:KeywordBasedClassifier.DocumentPath>
+                    <InArgument x:TypeArguments="x:String">
+                      <DelegateArgumentValue x:TypeArguments="x:String">
+                        <DelegateInArgument x:TypeArguments="x:String" Name="DocumentPath" />
+                      </DelegateArgumentValue>
+                    </InArgument>
+                  </p1:KeywordBasedClassifier.DocumentPath>
+                  <p1:KeywordBasedClassifier.DocumentText>
+                    <InArgument x:TypeArguments="x:String">
+                      <DelegateArgumentValue x:TypeArguments="x:String">
+                        <DelegateInArgument x:TypeArguments="x:String" Name="DocumentText" />
+                      </DelegateArgumentValue>
+                    </InArgument>
+                  </p1:KeywordBasedClassifier.DocumentText>
+                  <p1:KeywordBasedClassifier.DocumentTypes>
+                    <InArgument x:TypeArguments="p2:ClassifierDocumentType[]">
+                      <DelegateArgumentValue x:TypeArguments="p2:ClassifierDocumentType[]">
+                        <DelegateInArgument x:TypeArguments="p2:ClassifierDocumentType[]" Name="DocumentTypes" />
+                      </DelegateArgumentValue>
+                    </InArgument>
+                  </p1:KeywordBasedClassifier.DocumentTypes>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </p1:KeywordBasedClassifier>
+              </p1:ClassifyDocumentScope.Classifiers>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </p1:ClassifyDocumentScope>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="839,51" sap2010:WorkflowViewState.IdRef="CommentOut_45">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,488" sap2010:WorkflowViewState.IdRef="Sequence_68">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <p1:PresentClassificationStation sap2010:Annotation.AnnotationText="[Optional] 구분한 결과를 검증합니다." AutomaticClassificationResults="[classification_results]" DisplayName="Present Classification Station" DocumentObjectModel="[dom]" DocumentPath="[document]" DocumentText="[doctext]" sap:VirtualizedContainerService.HintSize="334,396" sap2010:WorkflowViewState.IdRef="PresentClassificationStation_1" Taxonomy="[taxonomy]" ValidatedClassificationResults="[validated_classifications]">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </p1:PresentClassificationStation>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="839,91" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[String.Format(&quot;[{0}번째 파일] {1}: 파일 내 문서의 개수={2}&quot;, index + 1, filename, classification_results.Count)]" />
+            <If Condition="[classification_results.Count = 0]" DisplayName="If - Classfication 결과가 없는 경우 파일명만 메모리에 추가" sap:VirtualizedContainerService.HintSize="839,237" sap2010:WorkflowViewState.IdRef="If_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{ filename }]" DataTable="[dtNoClassfication]" DisplayName="Add Data Row - FileName" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AddDataRow_3" />
+              </If.Then>
+            </If>
+            <ui:ForEach x:TypeArguments="p4:ClassificationResult" sap2010:Annotation.AnnotationText="파일 안에 문서가 여러 개 담겨 있다면 문서들을 각각 다 인식해야 합니다." CurrentIndex="[index2]" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="839,2782" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[classification_results]">
+              <ui:ForEach.Body>
+                <ActivityAction x:TypeArguments="p4:ClassificationResult">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="p4:ClassificationResult" Name="result" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="803,2617" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="p4:ExtractionResult" Name="validated_presentation" />
+                      <Variable x:TypeArguments="x:Int32" Name="intIndex" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="761,91" sap2010:WorkflowViewState.IdRef="LogMessage_6" Message="[String.Format(&quot;[{0}번째 파일의 {1}번째 문서] {2}: 데이터 추출 중...&quot;, index + 1, index2 + 1, filename)]" />
+                    <p5:DataExtractionScope DocumentTypeId="{x:Null}" ClassificationResult="[result]" DisplayName="Data Extraction Scope" DocumentObjectModel="[dom]" DocumentPath="[document]" DocumentText="[doctext]" ExtractionResult="[extraction_result]" FormatValuesIfPossible="True" sap:VirtualizedContainerService.HintSize="761,513" sap2010:WorkflowViewState.IdRef="DataExtractionScope_14" Taxonomy="[taxonomy]" TaxonomyConfiguration="{}{&quot;TaxonomyMappings&quot;:{&quot;UIb60e755a1a6d4dfcb6cbca3d71cae97f&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;y2c.stationery.psv&quot;:{&quot;FieldMappings&quot;:{&quot;y2c.stationery.psv.field1&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.stationery.psv.field1&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.stationery.psv.inlet_line_size&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.stationery.psv.inlet_line_size&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.stationery.psv.outlet_line_size&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.stationery.psv.outlet_line_size&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.stationery.psv.bodyshell_material&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.stationery.psv.bodyshell_material&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.stationery.psv.internals_material&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.stationery.psv.internals_material&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.stationery.psv.gasket_material&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.stationery.psv.gasket_material&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.stationery.psv.handling_material&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.stationery.psv.handling_material&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.stationery.psv.nor_ope_pre&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.stationery.psv.nor_ope_pre&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.stationery.psv.max_des_tem&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.stationery.psv.max_des_tem&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.stationery.psv.set_pressure&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.stationery.psv.set_pressure&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.stationery.psv.maximum_design_pressure&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.stationery.psv.maximum_design_pressure&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;y2c.instrument.flow_control_valve&quot;:{&quot;FieldMappings&quot;:{&quot;y2c.instrument.flow_control_valve.fluid_state&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.fluid_state&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.line_size&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.line_size&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.line_schedule&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.line_schedule&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.body_size&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.body_size&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.body_rating&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.body_rating&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.body_material&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.body_material&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.bonnet_type&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.bonnet_type&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.packing_type&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.packing_type&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.packing_material&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.packing_material&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.cha_for&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.cha_for&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.stem_material&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.stem_material&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.plug_material&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.plug_material&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.seat_material&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.seat_material&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.actuator_type&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.actuator_type&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.actuator_manufacturer&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.actuator_manufacturer&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.actuator_model_no&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.actuator_model_no&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.actuator_fail_action&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.actuator_fail_action&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.actuator_supply_pressure&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.actuator_supply_pressure&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.positioner_type&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.positioner_type&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.positioner_manufacturer&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.positioner_manufacturer&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.positioner_model_no&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.positioner_model_no&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.positioner_input_signal&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.positioner_input_signal&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.pos_inc_sig&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.pos_inc_sig&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.positioner_cam_character&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.positioner_cam_character&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.filter_n_regulator&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.filter_n_regulator&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.exp_pro_con&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.exp_pro_con&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.leakage_class&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.leakage_class&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.open_time&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.open_time&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.close_time&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.close_time&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.ser_equ&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.ser_equ&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.manufacturer&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.manufacturer&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.model_no&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.model_no&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.instrument_type&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.instrument_type&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.tag_no&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.tag_no&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.fluid_name&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.fluid_name&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.lim_swi_man&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.lim_swi_man&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.sol_val_man&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.sol_val_man&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.table&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.table&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.table.col1&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.table.col1&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.table.col2&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.table.col2&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.table.col3&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.table.col3&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.table.col4&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.table.col4&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.table.col5&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.table.col5&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.table.col6&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.table.col6&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.table.col7&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.table.col7&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;y2c.instrument.control_valve(FAMAN)&quot;:{&quot;FieldMappings&quot;:{&quot;y2c.instrument.control_valve(FAMAN).tag_no&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.control_valve(FAMAN).tag_no&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.control_valve(FAMAN).manufacturer&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.control_valve(FAMAN).manufacturer&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.control_valve(FAMAN).model_no&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.control_valve(FAMAN).model_no&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.control_valve(FAMAN).line_size&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.control_valve(FAMAN).line_size&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.control_valve(FAMAN).line_schedule&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.control_valve(FAMAN).line_schedule&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.control_valve(FAMAN).exp_pro_con&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.control_valve(FAMAN).exp_pro_con&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.control_valve(FAMAN).fluid_name&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.control_valve(FAMAN).fluid_name&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.control_valve(FAMAN).fluid_state&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.control_valve(FAMAN).fluid_state&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.control_valve(FAMAN).maximum_flow_rate&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.control_valve(FAMAN).maximum_flow_rate&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.control_valve(FAMAN).normal_flow_rate&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.control_valve(FAMAN).normal_flow_rate&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.control_valve(FAMAN).minimum_flow_rate&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.control_valve(FAMAN).minimum_flow_rate&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.control_valve(FAMAN).normal_temperature&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.control_valve(FAMAN).normal_temperature&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.control_valve(FAMAN).specific_gravity&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.control_valve(FAMAN).specific_gravity&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.control_valve(FAMAN).shu_dif_pre&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.control_valve(FAMAN).shu_dif_pre&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.control_valve(FAMAN).body_rating&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.control_valve(FAMAN).body_rating&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.control_valve(FAMAN).body_size&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.control_valve(FAMAN).body_size&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.control_valve(FAMAN).body_material&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.control_valve(FAMAN).body_material&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.control_valve(FAMAN).packing_material&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.control_valve(FAMAN).packing_material&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.control_valve(FAMAN).bonnet_type&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.control_valve(FAMAN).bonnet_type&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.control_valve(FAMAN).actuator_type&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.control_valve(FAMAN).actuator_type&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.control_valve(FAMAN).positioner_model_no&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.control_valve(FAMAN).positioner_model_no&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.control_valve(FAMAN).positioner_input_signal&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.control_valve(FAMAN).positioner_input_signal&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;y2c.rotating.centrifugal_pump&quot;:{&quot;FieldMappings&quot;:{&quot;y2c.rotating.centrifugal_pump.tag_no&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.rotating.centrifugal_pump.tag_no&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;tag_no\&quot;&quot;,&quot;ShouldExtract&quot;:false},&quot;y2c.rotating.centrifugal_pump.pump_application&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.rotating.centrifugal_pump.pump_application&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;pump_application\&quot;&quot;,&quot;ShouldExtract&quot;:false},&quot;y2c.rotating.centrifugal_pump.number_of_stages&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.rotating.centrifugal_pump.number_of_stages&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;number_of_stages\&quot;&quot;,&quot;ShouldExtract&quot;:false},&quot;y2c.rotating.centrifugal_pump.manufacturer_name&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.rotating.centrifugal_pump.manufacturer_name&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;manufacturer_name\&quot;&quot;,&quot;ShouldExtract&quot;:false},&quot;y2c.rotating.centrifugal_pump.model_no&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.rotating.centrifugal_pump.model_no&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;model_no\&quot;&quot;,&quot;ShouldExtract&quot;:false},&quot;y2c.rotating.centrifugal_pump.rated_volume_flowrate&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.rotating.centrifugal_pump.rated_volume_flowrate&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;rated_volume_flowrate\&quot;&quot;,&quot;ShouldExtract&quot;:false},&quot;y2c.rotating.centrifugal_pump.outlet_rated_pressure&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.rotating.centrifugal_pump.outlet_rated_pressure&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;outlet_rated_pressure\&quot;&quot;,&quot;ShouldExtract&quot;:false},&quot;y2c.rotating.centrifugal_pump.inlet_rated_pressure&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.rotating.centrifugal_pump.inlet_rated_pressure&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;inlet_rated_pressure\&quot;&quot;,&quot;ShouldExtract&quot;:false},&quot;y2c.rotating.centrifugal_pump.total_differential_head&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.rotating.centrifugal_pump.total_differential_head&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;total_differential_head\&quot;&quot;,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;y2c.rotating.agiator&quot;:{&quot;FieldMappings&quot;:{&quot;y2c.rotating.agiator.customer&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.rotating.agiator.customer&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.rotating.agiator.projectName&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.rotating.agiator.projectName&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;}}},&quot;UI0df3381c1f614900a9164ad97bbc72cf&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;y2c.stationery.psv&quot;:{&quot;FieldMappings&quot;:{&quot;y2c.stationery.psv.field1&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.stationery.psv.field1&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.stationery.psv.inlet_line_size&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.stationery.psv.inlet_line_size&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.stationery.psv.outlet_line_size&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.stationery.psv.outlet_line_size&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.stationery.psv.bodyshell_material&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.stationery.psv.bodyshell_material&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.stationery.psv.internals_material&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.stationery.psv.internals_material&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.stationery.psv.gasket_material&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.stationery.psv.gasket_material&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.stationery.psv.handling_material&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.stationery.psv.handling_material&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.stationery.psv.nor_ope_pre&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.stationery.psv.nor_ope_pre&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.stationery.psv.max_des_tem&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.stationery.psv.max_des_tem&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.stationery.psv.set_pressure&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.stationery.psv.set_pressure&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.stationery.psv.maximum_design_pressure&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.stationery.psv.maximum_design_pressure&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:null},&quot;y2c.instrument.flow_control_valve&quot;:{&quot;FieldMappings&quot;:{&quot;y2c.instrument.flow_control_valve.fluid_state&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.fluid_state&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.line_size&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.line_size&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.line_schedule&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.line_schedule&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.body_size&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.body_size&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.body_rating&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.body_rating&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.body_material&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.body_material&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.bonnet_type&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.bonnet_type&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.packing_type&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.packing_type&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.packing_material&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.packing_material&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.cha_for&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.cha_for&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.stem_material&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.stem_material&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.plug_material&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.plug_material&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.seat_material&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.seat_material&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.actuator_type&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.actuator_type&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.actuator_manufacturer&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.actuator_manufacturer&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.actuator_model_no&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.actuator_model_no&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.actuator_fail_action&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.actuator_fail_action&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.actuator_supply_pressure&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.actuator_supply_pressure&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.positioner_type&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.positioner_type&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.positioner_manufacturer&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.positioner_manufacturer&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.positioner_model_no&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.positioner_model_no&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.positioner_input_signal&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.positioner_input_signal&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.pos_inc_sig&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.pos_inc_sig&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.positioner_cam_character&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.positioner_cam_character&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.filter_n_regulator&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.filter_n_regulator&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.exp_pro_con&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.exp_pro_con&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.leakage_class&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.leakage_class&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.open_time&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.open_time&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.close_time&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.close_time&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.ser_equ&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.ser_equ&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.manufacturer&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.manufacturer&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.model_no&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.model_no&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.instrument_type&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.instrument_type&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.tag_no&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.tag_no&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.fluid_name&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.fluid_name&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.lim_swi_man&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.lim_swi_man&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.sol_val_man&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.sol_val_man&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.table&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.table&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.table.col1&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.table.col1&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.table.col2&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.table.col2&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.table.col3&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.table.col3&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.table.col4&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.table.col4&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.table.col5&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.table.col5&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.table.col6&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.table.col6&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.instrument.flow_control_valve.table.col7&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.flow_control_valve.table.col7&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:null},&quot;y2c.instrument.control_valve(FAMAN)&quot;:{&quot;FieldMappings&quot;:{&quot;y2c.instrument.control_valve(FAMAN).tag_no&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.control_valve(FAMAN).tag_no&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;y2c.instrument.control_valve(FAMAN).manufacturer&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.control_valve(FAMAN).manufacturer&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;y2c.instrument.control_valve(FAMAN).model_no&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.control_valve(FAMAN).model_no&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;y2c.instrument.control_valve(FAMAN).line_size&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.control_valve(FAMAN).line_size&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;y2c.instrument.control_valve(FAMAN).line_schedule&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.control_valve(FAMAN).line_schedule&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;y2c.instrument.control_valve(FAMAN).exp_pro_con&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.control_valve(FAMAN).exp_pro_con&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;y2c.instrument.control_valve(FAMAN).fluid_name&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.control_valve(FAMAN).fluid_name&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;y2c.instrument.control_valve(FAMAN).fluid_state&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.control_valve(FAMAN).fluid_state&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;y2c.instrument.control_valve(FAMAN).maximum_flow_rate&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.control_valve(FAMAN).maximum_flow_rate&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;y2c.instrument.control_valve(FAMAN).normal_flow_rate&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.control_valve(FAMAN).normal_flow_rate&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;y2c.instrument.control_valve(FAMAN).minimum_flow_rate&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.control_valve(FAMAN).minimum_flow_rate&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;y2c.instrument.control_valve(FAMAN).normal_temperature&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.control_valve(FAMAN).normal_temperature&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;y2c.instrument.control_valve(FAMAN).specific_gravity&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.control_valve(FAMAN).specific_gravity&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;y2c.instrument.control_valve(FAMAN).shu_dif_pre&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.control_valve(FAMAN).shu_dif_pre&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;y2c.instrument.control_valve(FAMAN).body_rating&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.control_valve(FAMAN).body_rating&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;y2c.instrument.control_valve(FAMAN).body_size&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.control_valve(FAMAN).body_size&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;y2c.instrument.control_valve(FAMAN).body_material&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.control_valve(FAMAN).body_material&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;y2c.instrument.control_valve(FAMAN).packing_material&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.control_valve(FAMAN).packing_material&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;y2c.instrument.control_valve(FAMAN).bonnet_type&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.control_valve(FAMAN).bonnet_type&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;y2c.instrument.control_valve(FAMAN).actuator_type&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.control_valve(FAMAN).actuator_type&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;y2c.instrument.control_valve(FAMAN).positioner_model_no&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.control_valve(FAMAN).positioner_model_no&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;y2c.instrument.control_valve(FAMAN).positioner_input_signal&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.instrument.control_valve(FAMAN).positioner_input_signal&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true}},&quot;ExtractorDocumentTypeId&quot;:null},&quot;y2c.rotating.centrifugal_pump&quot;:{&quot;FieldMappings&quot;:{&quot;y2c.rotating.centrifugal_pump.tag_no&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.rotating.centrifugal_pump.tag_no&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.rotating.centrifugal_pump.pump_application&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.rotating.centrifugal_pump.pump_application&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.rotating.centrifugal_pump.number_of_stages&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.rotating.centrifugal_pump.number_of_stages&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.rotating.centrifugal_pump.manufacturer_name&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.rotating.centrifugal_pump.manufacturer_name&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.rotating.centrifugal_pump.model_no&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.rotating.centrifugal_pump.model_no&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.rotating.centrifugal_pump.rated_volume_flowrate&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.rotating.centrifugal_pump.rated_volume_flowrate&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.rotating.centrifugal_pump.outlet_rated_pressure&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.rotating.centrifugal_pump.outlet_rated_pressure&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.rotating.centrifugal_pump.inlet_rated_pressure&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.rotating.centrifugal_pump.inlet_rated_pressure&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.rotating.centrifugal_pump.total_differential_head&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.rotating.centrifugal_pump.total_differential_head&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:null},&quot;y2c.rotating.agiator&quot;:{&quot;FieldMappings&quot;:{&quot;y2c.rotating.agiator.customer&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.rotating.agiator.customer&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;y2c.rotating.agiator.projectName&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;y2c.rotating.agiator.projectName&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:null}}}},&quot;ExtractorMinimumConfidence&quot;:{&quot;UIb60e755a1a6d4dfcb6cbca3d71cae97f&quot;:&quot;0&quot;,&quot;UI0df3381c1f614900a9164ad97bbc72cf&quot;:&quot;0&quot;},&quot;ExtractorsAliases&quot;:{},&quot;DocumentTypeOptionsByExtractor&quot;:{&quot;UI0df3381c1f614900a9164ad97bbc72cf&quot;:[],&quot;UIb60e755a1a6d4dfcb6cbca3d71cae97f&quot;:[{&quot;FieldId&quot;:&quot;&quot;,&quot;SubOptions&quot;:[{&quot;FieldId&quot;:&quot;tag_no&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;pump_application&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;number_of_stages&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;manufacturer_name&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;model_no&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;rated_volume_flowrate&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;outlet_rated_pressure&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;inlet_rated_pressure&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;total_differential_head&quot;,&quot;SubOptions&quot;:null}]}]}}">
+                      <p5:DataExtractionScope.Extractors>
+                        <p6:MachineLearningExtractor SelectedMLSkill="{x:Null}" ApiKey="LvB7b2P9f15YEivD6RCAKayPOICcPmWh8u6nPls9AFewaZVYpMG1nETZjnvymSr9DIjNbrxPWuWZMYoqoZz1zw==" Configuration="{}{&quot;Endpoint&quot;:&quot;https://ai-uipath.deskover.com/public/mlskills/f343400c-5548-41b7-a30f-5d2060a5f379/b0f8a304-b8ca-443a-ab33-08052d7eb297/ex-pu-ce&quot;,&quot;ApiKey&quot;:&quot;&quot;,&quot;AvailableMLSkills&quot;:[&quot;receipts_kor_8_1&quot;,&quot;skl_clf_ik_y2c_stn_ctv&quot;,&quot;skl_clf_ml_y2c_stn_ctv&quot;,&quot;skl_ext_ml_y2c_stn_psv_8_1&quot;,&quot;skl_fl_co_va_qk_va_95_v1&quot;,&quot;skl_pkg_ext_fm_y2c_psv&quot;,&quot;skl_psv_111_minoh&quot;]}" DisplayName="Machine Learning Extractor" sap:VirtualizedContainerService.HintSize="234,192" sap2010:WorkflowViewState.IdRef="MachineLearningExtractor_30" PersistenceId="UIb60e755a1a6d4dfcb6cbca3d71cae97f" RetryOnFailure="True" Timeout="100000" UseServerSideOCR="False">
+                          <p6:MachineLearningExtractor.AvailableMLSkills>
+                            <sc:BindingList x:TypeArguments="x:String" AllowEdit="True" AllowNew="False" AllowRemove="True" RaiseListChangedEvents="True">
+                              <x:String>receipts_kor_8_1</x:String>
+                              <x:String>skl_clf_ik_y2c_stn_ctv</x:String>
+                              <x:String>skl_clf_ml_y2c_stn_ctv</x:String>
+                              <x:String>skl_ext_ml_y2c_stn_psv_8_1</x:String>
+                              <x:String>skl_fl_co_va_qk_va_95_v1</x:String>
+                              <x:String>skl_pkg_ext_fm_y2c_psv</x:String>
+                              <x:String>skl_psv_111_minoh</x:String>
+                            </sc:BindingList>
+                          </p6:MachineLearningExtractor.AvailableMLSkills>
+                          <p6:MachineLearningExtractor.DocumentBounds>
+                            <InArgument x:TypeArguments="p4:ResultsDocumentBounds">
+                              <DelegateArgumentValue x:TypeArguments="p4:ResultsDocumentBounds">
+                                <DelegateInArgument x:TypeArguments="p4:ResultsDocumentBounds" Name="DocumentBounds" />
+                              </DelegateArgumentValue>
+                            </InArgument>
+                          </p6:MachineLearningExtractor.DocumentBounds>
+                          <p6:MachineLearningExtractor.DocumentObjectModel>
+                            <InArgument x:TypeArguments="p3:Document">
+                              <DelegateArgumentValue x:TypeArguments="p3:Document">
+                                <DelegateInArgument x:TypeArguments="p3:Document" Name="DocumentObjectModel" />
+                              </DelegateArgumentValue>
+                            </InArgument>
+                          </p6:MachineLearningExtractor.DocumentObjectModel>
+                          <p6:MachineLearningExtractor.DocumentPath>
+                            <InArgument x:TypeArguments="x:String">
+                              <DelegateArgumentValue x:TypeArguments="x:String">
+                                <DelegateInArgument x:TypeArguments="x:String" Name="DocumentPath" />
+                              </DelegateArgumentValue>
+                            </InArgument>
+                          </p6:MachineLearningExtractor.DocumentPath>
+                          <p6:MachineLearningExtractor.DocumentText>
+                            <InArgument x:TypeArguments="x:String">
+                              <DelegateArgumentValue x:TypeArguments="x:String">
+                                <DelegateInArgument x:TypeArguments="x:String" Name="DocumentText" />
+                              </DelegateArgumentValue>
+                            </InArgument>
+                          </p6:MachineLearningExtractor.DocumentText>
+                          <p6:MachineLearningExtractor.Endpoint>
+                            <InArgument x:TypeArguments="x:String">
+                              <Literal x:TypeArguments="x:String" Value="" />
+                            </InArgument>
+                          </p6:MachineLearningExtractor.Endpoint>
+                          <p6:MachineLearningExtractor.ExtractorDocumentType>
+                            <InArgument x:TypeArguments="p7:ExtractorDocumentType">
+                              <DelegateArgumentValue x:TypeArguments="p7:ExtractorDocumentType">
+                                <DelegateInArgument x:TypeArguments="p7:ExtractorDocumentType" Name="ExtractorDocumentType" />
+                              </DelegateArgumentValue>
+                            </InArgument>
+                          </p6:MachineLearningExtractor.ExtractorDocumentType>
+                          <p6:MachineLearningExtractor.ExtractorResult>
+                            <OutArgument x:TypeArguments="p7:ExtractorResult">
+                              <DelegateArgumentReference x:TypeArguments="p7:ExtractorResult">
+                                <DelegateOutArgument x:TypeArguments="p7:ExtractorResult" Name="ExtractorResult" />
+                              </DelegateArgumentReference>
+                            </OutArgument>
+                          </p6:MachineLearningExtractor.ExtractorResult>
+                        </p6:MachineLearningExtractor>
+                        <p5:FormExtractor SerializedSignatureFields="{x:Null}" ApiKey="LvB7b2P9f15YEivD6RCAKayPOICcPmWh8u6nPls9AFewaZVYpMG1nETZjnvymSr9DIjNbrxPWuWZMYoqoZz1zw==" DisplayName="Form Extractor" Endpoint="https://aic.lgchem.com:31390/public/mlskills/host/7164ab80-f0be-4645-8fc2-93491081aa81/skl-pkg-ext-fm-y2c-psv" sap:VirtualizedContainerService.HintSize="234,192" sap2010:WorkflowViewState.IdRef="FormExtractor_1" MinOverlapPercentage="65" PersistenceId="UI0df3381c1f614900a9164ad97bbc72cf" SerializedSettings="{}{&quot;DocTypeSettings&quot;:[]}" SerializedTemplates="[{&quot;DocumentTypeId&quot;:&quot;y2c.stationery.psv&quot;,&quot;FormId&quot;:&quot;fac199e5&quot;,&quot;FormName&quot;:&quot;psv_template&quot;,&quot;OriginalFileExtension&quot;:&quot;pdf&quot;,&quot;Pages&quot;:[{&quot;Page&quot;:0,&quot;Size&quot;:[0.0,0.0,595.0,842.0],&quot;SkewAngle&quot;:0.0,&quot;Evidence&quot;:[{&quot;Text&quot;:&quot;Pressure&quot;,&quot;Box&quot;:[47.3308,251.82,32.2943,9.592]},{&quot;Text&quot;:&quot;Safety&quot;,&quot;Box&quot;:[47.3308,286.9504,23.6248,9.592]},{&quot;Text&quot;:&quot;&amp;&quot;,&quot;Box&quot;:[47.3308,313.4112,6.8389,9.592]},{&quot;Text&quot;:&quot;Relief&quot;,&quot;Box&quot;:[47.3308,323.0862,21.3712,9.592]},{&quot;Text&quot;:&quot;Valve&quot;,&quot;Box&quot;:[47.3308,347.2472,20.5597,9.592]},{&quot;Text&quot;:&quot;Specification&quot;,&quot;Box&quot;:[47.3308,370.643,48.4441,9.592]},{&quot;Text&quot;:&quot;and&quot;,&quot;Box&quot;:[47.3308,421.9169,14.2012,9.592]},{&quot;Text&quot;:&quot;Calculation&quot;,&quot;Box&quot;:[47.3308,438.9478,41.9708,9.592]},{&quot;Text&quot;:&quot;Sheet&quot;,&quot;Box&quot;:[47.3308,483.7483,21.2795,9.592]}],&quot;Fields&quot;:[{&quot;Field&quot;:&quot;y2c.stationery.psv.field1&quot;,&quot;Box&quot;:[125.1011,221.3327,333.4425,10.1043]},{&quot;Field&quot;:&quot;y2c.stationery.psv.inlet_line_size&quot;,&quot;Box&quot;:[248.7587,220.8515,127.988,9.6232]},{&quot;Field&quot;:&quot;y2c.stationery.psv.outlet_line_size&quot;,&quot;Box&quot;:[259.8253,220.3704,128.4692,11.0666]},{&quot;Field&quot;:&quot;y2c.stationery.psv.bodyshell_material&quot;,&quot;Box&quot;:[273.2978,220.8515,127.988,11.5478]},{&quot;Field&quot;:&quot;y2c.stationery.psv.internals_material&quot;,&quot;Box&quot;:[309.8658,220.3704,128.4692,10.5855]},{&quot;Field&quot;:&quot;y2c.stationery.psv.gasket_material&quot;,&quot;Box&quot;:[334.4048,220.3704,129.4315,11.0666]},{&quot;Field&quot;:&quot;y2c.stationery.psv.handling_material&quot;,&quot;Box&quot;:[458.0624,220.8515,127.988,11.5478]},{&quot;Field&quot;:&quot;y2c.stationery.psv.nor_ope_pre&quot;,&quot;Box&quot;:[519.1695,220.8515,127.988,9.6232]},{&quot;Field&quot;:&quot;y2c.stationery.psv.max_des_tem&quot;,&quot;Box&quot;:[531.4397,220.9907,127.4475,11.4376]},{&quot;Field&quot;:&quot;y2c.stationery.psv.set_pressure&quot;,&quot;Box&quot;:[543.7086,220.3704,128.4692,11.0666]},{&quot;Field&quot;:&quot;y2c.stationery.psv.maximum_design_pressure&quot;,&quot;Box&quot;:[555.9488,220.5822,128.2645,10.2121]}],&quot;Tables&quot;:[]}],&quot;AnchorBasedConfiguration&quot;:{&quot;AnchorBasedFieldConfiguration&quot;:[]}},{&quot;DocumentTypeId&quot;:&quot;y2c.instrument.control_valve(FAMAN)&quot;,&quot;FormId&quot;:&quot;688aa530&quot;,&quot;FormName&quot;:&quot;control_valve_template (FA MAN)&quot;,&quot;OriginalFileExtension&quot;:&quot;pdf&quot;,&quot;Pages&quot;:[{&quot;Page&quot;:0,&quot;Size&quot;:[0.0,0.0,595.0,842.0],&quot;SkewAngle&quot;:0.0,&quot;Evidence&quot;:[{&quot;Text&quot;:&quot;Control&quot;,&quot;Box&quot;:[20.7197,226.0,44.163,17.808]},{&quot;Text&quot;:&quot;Valve&quot;,&quot;Box&quot;:[20.7197,273.5303,32.6278,17.808]},{&quot;Text&quot;:&quot;Data&quot;,&quot;Box&quot;:[20.7197,309.5255,28.1836,17.808]},{&quot;Text&quot;:&quot;Sheet&quot;,&quot;Box&quot;:[20.7197,341.0309,34.0069,17.808]},{&quot;Text&quot;:&quot;Model&quot;,&quot;Box&quot;:[98.1937,58.0,23.5643,13.077]},{&quot;Text&quot;:&quot;Body&quot;,&quot;Box&quot;:[176.1937,58.0,19.9748,13.077]},{&quot;Text&quot;:&quot;material&quot;,&quot;Box&quot;:[176.1937,81.0058,31.0562,13.077]},{&quot;Text&quot;:&quot;&lt;Accessories&gt;&quot;,&quot;Box&quot;:[349.9147,58.0,67.3696,13.356]}],&quot;Fields&quot;:[{&quot;Field&quot;:&quot;y2c.instrument.control_valve(FAMAN).tag_no&quot;,&quot;Box&quot;:[53.0419,160.6708,172.0001,12.8743]},{&quot;Field&quot;:&quot;y2c.instrument.control_valve(FAMAN).manufacturer&quot;,&quot;Box&quot;:[744.6472,333.7008,211.1379,19.0539]},{&quot;Field&quot;:&quot;y2c.instrument.control_valve(FAMAN).model_no&quot;,&quot;Box&quot;:[97.7552,160.1614,171.9443,14.4014]},{&quot;Field&quot;:&quot;y2c.instrument.control_valve(FAMAN).line_size&quot;,&quot;Box&quot;:[700.4332,415.023,64.1518,13.965]},{&quot;Field&quot;:&quot;y2c.instrument.control_valve(FAMAN).line_size&quot;,&quot;Box&quot;:[141.1019,22.6587,6.1796,3.6048]},{&quot;Field&quot;:&quot;y2c.instrument.control_valve(FAMAN).line_schedule&quot;,&quot;Box&quot;:[716.1438,415.023,64.5882,13.0922]},{&quot;Field&quot;:&quot;y2c.instrument.control_valve(FAMAN).exp_pro_con&quot;,&quot;Box&quot;:[376.6192,160.1614,171.9443,16.1471]},{&quot;Field&quot;:&quot;y2c.instrument.control_valve(FAMAN).fluid_name&quot;,&quot;Box&quot;:[571.6931,136.159,135.7226,10.9102]},{&quot;Field&quot;:&quot;y2c.instrument.control_valve(FAMAN).fluid_state&quot;,&quot;Box&quot;:[571.6931,274.5,57.6057,10.9102]},{&quot;Field&quot;:&quot;y2c.instrument.control_valve(FAMAN).maximum_flow_rate&quot;,&quot;Box&quot;:[595.2591,135.7226,50.1868,11.3466]},{&quot;Field&quot;:&quot;y2c.instrument.control_valve(FAMAN).normal_flow_rate&quot;,&quot;Box&quot;:[596.1319,186.7822,50.6232,11.3466]},{&quot;Field&quot;:&quot;y2c.instrument.control_valve(FAMAN).minimum_flow_rate&quot;,&quot;Box&quot;:[595.6955,238.2782,48.8776,10.4738]},{&quot;Field&quot;:&quot;y2c.instrument.control_valve(FAMAN).normal_temperature&quot;,&quot;Box&quot;:[655.4833,136.5954,49.314,11.3466]},{&quot;Field&quot;:&quot;y2c.instrument.control_valve(FAMAN).specific_gravity&quot;,&quot;Box&quot;:[667.7027,136.159,49.7504,22.6932]},{&quot;Field&quot;:&quot;y2c.instrument.control_valve(FAMAN).shu_dif_pre&quot;,&quot;Box&quot;:[643.7003,136.159,150.5604,10.9102]},{&quot;Field&quot;:&quot;y2c.instrument.control_valve(FAMAN).body_rating&quot;,&quot;Box&quot;:[160.5978,160.1614,85.5358,13.0922]},{&quot;Field&quot;:&quot;y2c.instrument.control_valve(FAMAN).body_size&quot;,&quot;Box&quot;:[130.9221,160.5978,85.0994,13.5286]},{&quot;Field&quot;:&quot;y2c.instrument.control_valve(FAMAN).body_material&quot;,&quot;Box&quot;:[174.9992,160.1614,172.8172,15.2742]},{&quot;Field&quot;:&quot;y2c.instrument.control_valve(FAMAN).packing_material&quot;,&quot;Box&quot;:[265.7718,159.725,113.9022,13.5286]},{&quot;Field&quot;:&quot;y2c.instrument.control_valve(FAMAN).bonnet_type&quot;,&quot;Box&quot;:[219.9491,159.725,172.8172,14.4014]},{&quot;Field&quot;:&quot;y2c.instrument.control_valve(FAMAN).actuator_type&quot;,&quot;Box&quot;:[236.0962,160.1614,99.0644,13.0922]},{&quot;Field&quot;:&quot;y2c.instrument.control_valve(FAMAN).positioner_model_no&quot;,&quot;Box&quot;:[361.345,160.5978,173.2536,14.4014]},{&quot;Field&quot;:&quot;y2c.instrument.control_valve(FAMAN).positioner_input_signal&quot;,&quot;Box&quot;:[394.9483,160.1614,172.3808,13.5286]}],&quot;Tables&quot;:[]}],&quot;AnchorBasedConfiguration&quot;:{&quot;AnchorBasedFieldConfiguration&quot;:[]}},{&quot;DocumentTypeId&quot;:&quot;y2c.instrument.control_valve(FAMAN)&quot;,&quot;FormId&quot;:&quot;4ea659f3&quot;,&quot;FormName&quot;:&quot;control_valve_template2 (FA MAN)&quot;,&quot;OriginalFileExtension&quot;:&quot;PDF&quot;,&quot;Pages&quot;:[{&quot;Page&quot;:0,&quot;Size&quot;:[0.0,0.0,753.0,1065.0],&quot;SkewAngle&quot;:0.0,&quot;Evidence&quot;:[{&quot;Text&quot;:&quot;CONTROL&quot;,&quot;Box&quot;:[59.0725,274.09,80.7339,14.2425]},{&quot;Text&quot;:&quot;VALVE&quot;,&quot;Box&quot;:[59.0725,358.8111,55.6142,14.2425]},{&quot;Text&quot;:&quot;DATA&quot;,&quot;Box&quot;:[59.0725,418.4125,45.1835,14.2425]},{&quot;Text&quot;:&quot;SHEET&quot;,&quot;Box&quot;:[59.0725,467.5833,53.1261,14.2425]},{&quot;Text&quot;:&quot;Project&quot;,&quot;Box&quot;:[79.6631,223.9364,31.1176,8.9523]},{&quot;Text&quot;:&quot;Flow&quot;,&quot;Box&quot;:[215.7631,101.79,21.2029,8.9523]},{&quot;Text&quot;:&quot;Inlet&quot;,&quot;Box&quot;:[232.7931,101.79,20.0299,8.9523]},{&quot;Text&quot;:&quot;Outlet&quot;,&quot;Box&quot;:[249.8131,101.79,27.1778,8.9523]},{&quot;Text&quot;:&quot;Compressibility&quot;,&quot;Box&quot;:[334.8731,101.79,67.6988,8.9523]},{&quot;Text&quot;:&quot;Design&quot;,&quot;Box&quot;:[453.9831,104.3664,28.9422,8.9523]},{&quot;Text&quot;:&quot;Model&quot;,&quot;Box&quot;:[488.0131,104.3664,27.3783,8.9523]},{&quot;Text&quot;:&quot;Body&quot;,&quot;Box&quot;:[522.0331,104.3664,22.3157,8.9523]},{&quot;Text&quot;:&quot;Trim&quot;,&quot;Box&quot;:[624.1331,104.3664,22.1753,8.9523]},{&quot;Text&quot;:&quot;Port&quot;,&quot;Box&quot;:[641.1431,104.3664,18.9673,8.9523]},{&quot;Text&quot;:&quot;Packing&quot;,&quot;Box&quot;:[811.2931,104.3664,34.3056,8.9523]},{&quot;Text&quot;:&quot;Actuator&quot;,&quot;Box&quot;:[845.3431,104.3664,38.4459,8.9523]}],&quot;Fields&quot;:[{&quot;Field&quot;:&quot;y2c.instrument.control_valve(FAMAN).tag_no&quot;,&quot;Box&quot;:[74.9477,595.671,120.568,14.9895]},{&quot;Field&quot;:&quot;y2c.instrument.control_valve(FAMAN).model_no&quot;,&quot;Box&quot;:[482.2719,214.4155,202.0328,16.293]}],&quot;Tables&quot;:[]}],&quot;AnchorBasedConfiguration&quot;:{&quot;AnchorBasedFieldConfiguration&quot;:[{&quot;FieldId&quot;:&quot;y2c.instrument.control_valve(FAMAN).tag_no&quot;,&quot;FieldDescriptors&quot;:[{&quot;PageIndexAtDesignTime&quot;:0,&quot;Offset&quot;:[-8.5399,-21.1585,101.0164,14.9895],&quot;Target&quot;:{&quot;Text&quot;:&quot;Tag No.&quot;,&quot;Area&quot;:[79.6631,487.6964,34.0751,8.9523]},&quot;Anchors&quot;:[{&quot;Text&quot;:&quot;SHT. No.&quot;,&quot;Area&quot;:[96.6731,611.5164,39.9898,8.9523]}]}]},{&quot;FieldId&quot;:&quot;y2c.instrument.control_valve(FAMAN).model_no&quot;,&quot;FieldDescriptors&quot;:[{&quot;PageIndexAtDesignTime&quot;:0,&quot;Offset&quot;:[-10.2174,-26.3524,92.5441,16.9447],&quot;Target&quot;:{&quot;Text&quot;:&quot;Model No.&quot;,&quot;Area&quot;:[488.0131,104.3664,44.7014,8.9523]},&quot;Anchors&quot;:[{&quot;Text&quot;:&quot;Max. Shut-Off Dp.&quot;,&quot;Area&quot;:[470.9931,104.3664,80.5108,8.9523]}]}]}]}},{&quot;DocumentTypeId&quot;:&quot;y2c.rotating.agiator&quot;,&quot;FormId&quot;:&quot;f984efcc&quot;,&quot;FormName&quot;:&quot;agiator&quot;,&quot;OriginalFileExtension&quot;:&quot;pdf&quot;,&quot;Pages&quot;:[{&quot;Page&quot;:0,&quot;Size&quot;:[0.0,0.0,595.0,842.0],&quot;SkewAngle&quot;:0.0,&quot;Evidence&quot;:[{&quot;Text&quot;:&quot;Agitator&quot;,&quot;Box&quot;:[104.9158,209.94,48.2435,18.6074]},{&quot;Text&quot;:&quot;data&quot;,&quot;Box&quot;:[104.9158,262.0952,27.2344,18.6074]},{&quot;Text&quot;:&quot;sheet&quot;,&quot;Box&quot;:[104.9158,293.2412,34.2342,18.6074]},{&quot;Text&quot;:&quot;for&quot;,&quot;Box&quot;:[104.9158,331.3871,16.3341,18.6074]},{&quot;Text&quot;:&quot;DN3105&quot;,&quot;Box&quot;:[104.9158,351.6329,51.3276,18.6074]}],&quot;Fields&quot;:[],&quot;Tables&quot;:[]},{&quot;Page&quot;:1,&quot;Size&quot;:[0.0,0.0,595.0,842.0],&quot;SkewAngle&quot;:0.0,&quot;Evidence&quot;:[{&quot;Text&quot;:&quot;AGITATORDATASHEET&quot;,&quot;Box&quot;:[46.7229,236.64,203.4984,22.3944]},{&quot;Text&quot;:&quot;CUSTOMER&quot;,&quot;Box&quot;:[79.8652,49.08,41.8176,10.0915]},{&quot;Text&quot;:&quot;SERVICE&quot;,&quot;Box&quot;:[134.2257,49.08,32.0026,10.0915]},{&quot;Text&quot;:&quot;PROCESS&quot;,&quot;Box&quot;:[168.9439,237.72,45.382,13.1167]},{&quot;Text&quot;:&quot;MIXING&quot;,&quot;Box&quot;:[188.0613,142.2,33.1296,11.1972]},{&quot;Text&quot;:&quot;OPERATING&quot;,&quot;Box&quot;:[188.0613,393.8321,50.8704,11.1972]},{&quot;Text&quot;:&quot;VESSEL&quot;,&quot;Box&quot;:[242.4213,394.8,32.214,11.1972]},{&quot;Text&quot;:&quot;SPECIFICATION&quot;,&quot;Box&quot;:[404.5039,289.6788,78.1788,13.1167]},{&quot;Text&quot;:&quot;MATERIAL&quot;,&quot;Box&quot;:[549.4639,273.6,54.12,13.1167]},{&quot;Text&quot;:&quot;MOTOR&quot;,&quot;Box&quot;:[603.8239,165.24,38.2678,13.1167]}],&quot;Fields&quot;:[{&quot;Field&quot;:&quot;y2c.rotating.agiator.customer&quot;,&quot;Box&quot;:[77.5534,97.8953,247.281,15.8921]},{&quot;Field&quot;:&quot;y2c.rotating.agiator.projectName&quot;,&quot;Box&quot;:[94.0812,98.531,246.0096,17.1635]}],&quot;Tables&quot;:[]}],&quot;AnchorBasedConfiguration&quot;:{&quot;AnchorBasedFieldConfiguration&quot;:[]}}]" Timeout="100000">
+                          <p5:FormExtractor.DocumentBounds>
+                            <InArgument x:TypeArguments="p4:ResultsDocumentBounds">
+                              <DelegateArgumentValue x:TypeArguments="p4:ResultsDocumentBounds">
+                                <DelegateInArgument x:TypeArguments="p4:ResultsDocumentBounds" Name="DocumentBounds" />
+                              </DelegateArgumentValue>
+                            </InArgument>
+                          </p5:FormExtractor.DocumentBounds>
+                          <p5:FormExtractor.DocumentObjectModel>
+                            <InArgument x:TypeArguments="p3:Document">
+                              <DelegateArgumentValue x:TypeArguments="p3:Document">
+                                <DelegateInArgument x:TypeArguments="p3:Document" Name="DocumentObjectModel" />
+                              </DelegateArgumentValue>
+                            </InArgument>
+                          </p5:FormExtractor.DocumentObjectModel>
+                          <p5:FormExtractor.DocumentPath>
+                            <InArgument x:TypeArguments="x:String">
+                              <DelegateArgumentValue x:TypeArguments="x:String">
+                                <DelegateInArgument x:TypeArguments="x:String" Name="DocumentPath" />
+                              </DelegateArgumentValue>
+                            </InArgument>
+                          </p5:FormExtractor.DocumentPath>
+                          <p5:FormExtractor.DocumentText>
+                            <InArgument x:TypeArguments="x:String">
+                              <DelegateArgumentValue x:TypeArguments="x:String">
+                                <DelegateInArgument x:TypeArguments="x:String" Name="DocumentText" />
+                              </DelegateArgumentValue>
+                            </InArgument>
+                          </p5:FormExtractor.DocumentText>
+                          <p5:FormExtractor.ExtractorDocumentType>
+                            <InArgument x:TypeArguments="p7:ExtractorDocumentType">
+                              <DelegateArgumentValue x:TypeArguments="p7:ExtractorDocumentType">
+                                <DelegateInArgument x:TypeArguments="p7:ExtractorDocumentType" Name="ExtractorDocumentType" />
+                              </DelegateArgumentValue>
+                            </InArgument>
+                          </p5:FormExtractor.ExtractorDocumentType>
+                          <p5:FormExtractor.ExtractorResult>
+                            <OutArgument x:TypeArguments="p7:ExtractorResult">
+                              <DelegateArgumentReference x:TypeArguments="p7:ExtractorResult">
+                                <DelegateOutArgument x:TypeArguments="p7:ExtractorResult" Name="ExtractorResult" />
+                              </DelegateArgumentReference>
+                            </OutArgument>
+                          </p5:FormExtractor.ExtractorResult>
+                        </p5:FormExtractor>
+                      </p5:DataExtractionScope.Extractors>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </p5:DataExtractionScope>
+                    <p:PresentValidationStation AutomaticExtractionResults="[extraction_result]" DisplayName="Present Validation Station" DocumentObjectModel="[dom]" DocumentPath="[document]" DocumentText="[doctext]" sap:VirtualizedContainerService.HintSize="761,365" sap2010:WorkflowViewState.IdRef="PresentValidationStation_1" Taxonomy="[taxonomy]" ValidatedExtractionResults="[validated_presentation]">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </p:PresentValidationStation>
+                    <Assign sap2010:Annotation.AnnotationText="자동으로 추출된 데이터의 confidence를 확인하려면 위의 액티비티를 disable 하시고, 대신 이 액티비티를 enable 하셔야 합니다." sap:VirtualizedContainerService.HintSize="761,132" sap2010:WorkflowViewState.IdRef="Assign_2">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="p4:ExtractionResult">[validated_presentation]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="p4:ExtractionResult">[extraction_result]</InArgument>
+                      </Assign.Value>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </Assign>
+                    <p5:ExportExtractionResults sap2010:Annotation.AnnotationText="추출한 데이터를 사용할 수 있는 형태로 바꿉니다." DataSet="[dataset]" DisplayName="Export Extraction Results" ExtractionResult="[validated_presentation]" sap:VirtualizedContainerService.HintSize="761,204" sap2010:WorkflowViewState.IdRef="ExportExtractionResults_1" IncludeConfidence="True" IncludeOCRConfidence="False">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </p5:ExportExtractionResults>
+                    <ui:ForEach x:TypeArguments="sd1:DataTable" sap2010:Annotation.AnnotationText="추출한 데이터를 excel 파일로 저장합니다.&#xA;&#xA;[주의] 파일명은 &quot;(원본파일명)_(문서의 순서 번호).xlsx&quot; 형식이고 순서 번호는 1부터 시작합니다." CurrentIndex="[intIndex]" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="761,1020" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[dataset.Tables]">
+                      <ui:ForEach.Body>
+                        <ActivityAction x:TypeArguments="sd1:DataTable">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="sd1:DataTable" Name="table" />
+                          </ActivityAction.Argument>
+                          <Sequence sap:VirtualizedContainerService.HintSize="725,829" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="scg:List(x:Object)" Name="listString" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <If Condition="[boolFlag = True And Not table.TableName.Contains(&quot;table&quot;)]" DisplayName="If - 빈 테이블 초기화" sap:VirtualizedContainerService.HintSize="683,51" sap2010:WorkflowViewState.IdRef="If_3">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <If.Then>
+                                <Sequence sap:VirtualizedContainerService.HintSize="376,426" sap2010:WorkflowViewState.IdRef="Sequence_53">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="334,160" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+                                    <ui:MultipleAssign.AssignOperations>
+                                      <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+                                          <ui:AssignOperation.To>
+                                            <OutArgument x:TypeArguments="sd1:DataTable">[dtFinal]</OutArgument>
+                                          </ui:AssignOperation.To>
+                                          <ui:AssignOperation.Value>
+                                            <InArgument x:TypeArguments="sd1:DataTable">[New DataTable]</InArgument>
+                                          </ui:AssignOperation.Value>
+                                        </ui:AssignOperation>
+                                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+                                          <ui:AssignOperation.To>
+                                            <OutArgument x:TypeArguments="sd1:DataTable">[dtFinal]</OutArgument>
+                                          </ui:AssignOperation.To>
+                                          <ui:AssignOperation.Value>
+                                            <InArgument x:TypeArguments="sd1:DataTable">[table.Clone]</InArgument>
+                                          </ui:AssignOperation.Value>
+                                        </ui:AssignOperation>
+                                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
+                                          <ui:AssignOperation.To>
+                                            <OutArgument x:TypeArguments="x:Boolean">[boolFlag]</OutArgument>
+                                          </ui:AssignOperation.To>
+                                          <ui:AssignOperation.Value>
+                                            <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                                          </ui:AssignOperation.Value>
+                                        </ui:AssignOperation>
+                                      </scg:List>
+                                    </ui:MultipleAssign.AssignOperations>
+                                  </ui:MultipleAssign>
+                                  <InvokeMethod DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="InvokeMethod_3" MethodName="SetOrdinal">
+                                    <InvokeMethod.TargetObject>
+                                      <InArgument x:TypeArguments="sd1:DataColumn">[dtFinal.Columns.Add("FileName")]</InArgument>
+                                    </InvokeMethod.TargetObject>
+                                    <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                                  </InvokeMethod>
+                                </Sequence>
+                              </If.Then>
+                            </If>
+                            <If Condition="[Not table.TableName.Contains(&quot;table&quot;)]" DisplayName="If - Dataset 테이블의 시트명이 Table이 아닌 경우만 취합" sap:VirtualizedContainerService.HintSize="683,646" sap2010:WorkflowViewState.IdRef="If_5">
+                              <If.Then>
+                                <Sequence sap:VirtualizedContainerService.HintSize="304,488" sap2010:WorkflowViewState.IdRef="Sequence_69">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Assign DisplayName="Assign - listString" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_7">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="scg:List(x:Object)">[listString]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="scg:List(x:Object)">[New List(Of Object)]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <Assign DisplayName="Assign - Row 추가" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="scg:List(x:Object)">[listString]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="scg:List(x:Object)">[table.Rows(0).ItemArray.ToList]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <InvokeMethod DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="262,134" sap2010:WorkflowViewState.IdRef="InvokeMethod_2" MethodName="Insert">
+                                    <InvokeMethod.TargetObject>
+                                      <InArgument x:TypeArguments="scg:List(x:Object)">[listString]</InArgument>
+                                    </InvokeMethod.TargetObject>
+                                    <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                                    <InArgument x:TypeArguments="x:String">[filename]</InArgument>
+                                  </InvokeMethod>
+                                  <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[listString.ToArray]" DataTable="[dtFinal]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                                </Sequence>
+                              </If.Then>
+                              <If.Else>
+                                <ui:WriteRange AddHeaders="True" DataTable="[table]" DisplayName="Write Range - Data" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteRange_4" SheetName="[table.TableName]" StartingCell="A1" WorkbookPath="[defaultPath+&quot;\&quot;+folderPath+&quot;\&quot;+filename+&quot;.xlsx&quot;]" />
+                              </If.Else>
+                            </If>
+                          </Sequence>
+                        </ActivityAction>
+                      </ui:ForEach.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:ForEach>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEach.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ForEach>
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="839,51" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <TryCatch.Try>
+                <ui:MoveFile ContinueOnError="{x:Null}" Destination="[defaultPath+&quot;\&quot;+folderPath+&quot;\&quot;+filename]" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="384,157" sap2010:WorkflowViewState.IdRef="MoveFile_1" Overwrite="False" Path="[document]" />
+              </TryCatch.Try>
+              <TryCatch.Catches>
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ActivityAction x:TypeArguments="s:Exception">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                    </ActivityAction.Argument>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[exception.GetType.Name+Environment.NewLine+exception.Message]" />
+                  </ActivityAction>
+                </Catch>
+              </TryCatch.Catches>
+            </TryCatch>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ForEach>
+    <ui:RemoveDuplicateRows DataTable="[dtFinal]" DisplayName="Remove Duplicate Rows" sap:VirtualizedContainerService.HintSize="917,22" sap2010:WorkflowViewState.IdRef="RemoveDuplicateRows_1" OutputDataTable="[dtFinal]" />
+    <ui:WriteRange AddHeaders="True" DataTable="[dtFinal]" DisplayName="Write Range - Data" sap:VirtualizedContainerService.HintSize="917,115" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="result" StartingCell="A1" WorkbookPath="[defaultPath+&quot;\&quot;+folderPath+&quot;\&quot;+folderPath+&quot;.xlsx&quot;]" />
+    <If Condition="[dtNoClassfication.Rows.Count &gt;= 1]" DisplayName="If - 미 인식 파일 검증" sap:VirtualizedContainerService.HintSize="917,292" sap2010:WorkflowViewState.IdRef="If_4">
+      <If.Then>
+        <ui:AppendRange DataTable="[dtNoClassfication]" DisplayName="Append Range" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="AppendRange_1" SheetName="result" WorkbookPath="[defaultPath+&quot;\&quot;+folderPath+&quot;\&quot;+folderPath+&quot;.xlsx&quot;]" />
+      </If.Then>
+    </If>
+  </Sequence>
+</Activity>
